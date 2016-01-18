@@ -2,6 +2,11 @@ package com.bbva.taller;
 
 public class Calculadora
 {
+	/**
+	 * Comentario de prueba
+	 * @param cadena
+	 * @return
+	 */
 	public int dimeElResultadoDe(final String cadena)
 	{
 		final Extractor extractor = new Extractor();
