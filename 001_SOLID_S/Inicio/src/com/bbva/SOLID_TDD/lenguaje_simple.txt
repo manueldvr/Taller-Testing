@@ -1,0 +1,55 @@
+EL LENGUAJE
+**********************
+	1- 	Cada línea representa una instrucción. 
+	2- 	Las instrucciones se componen de: nombre de instrucción + argumentos separados por un espacio
+	3- 	Las instrucciones son:
+			ASIGN NOMBRE_DE_VARIABLE VALOR
+				-Asigna una valor a una variable
+			ADD 	DESTINO VARIABLE_O_VALOR VARIABLE_O_VALOR
+				-Suma primero a segundo y lo asigna a DESTINO. Para restar, ADD con números negativos.
+			DIV		DESTINO VARIABLE_O_VALOR VARIABLE_O_VALOR
+				-Divide primero por segundo y lo asigna a DESTINO
+			MUL		DESTINO VARIABLE_O_VALOR VARIABLE_O_VALOR
+				-Multiplica primero por segundo y lo asigna a DESTINO
+			PRINT VARIABLE_O_VALOR
+				-Imprime por pantalla
+			REQ	DESTINO 
+				-Requiere datos del usuario y los guarda en DESTINO 
+			LABEL NOMBRE_DE_ETIQUETA
+				-Declara un nombre de etiqueta. Las etiquetas sólo se ejecutan cuando se las invoca con una GOTO o GOTOIF
+			END_LABEL
+				-Declara fin de la etiqueta actual
+			GOTOIF NOMBRE_DE_ETIQUETA VARIABLE_O_VALOR_O_NULL OPERATOR VARIABLE_O_VALOR_O_NULL
+				-Si se cumple la condición, pasa el control a NOMBRE_DE_ETIQUETA. 
+				-OPERATOR puede ser =, !=, <, <=, >, >=
+			# 
+				-Comentario: se ignora resto de linea
+
+
+
+PROGRAMA TEST
+******************************
+	#Programa que pide dos numeros al usuario y los suma
+	LABEL pideNumeroUno
+	PRINT Escribe el primer número:
+	REQ numeroUno
+	GOTOIF pideNumeroUno numeroUno = NULL
+	END_LABEL
+
+	LABEL pideNumeroDos
+	PRINT Escribe el segundo número:
+	REQ numeroDos
+	GOTOIF pideNumeroDos numeroDos = NULL
+	END_LABEL
+	
+	
+	GOTOIF pideNumeroUno numeroUno = NULL
+	GOTOIF pideNumeroDos numeroDos = NULL
+
+	ADD suma numeroUno numeroDos
+	PRINT El resultado es 
+	PRINT suma
+
+	
+
+	
