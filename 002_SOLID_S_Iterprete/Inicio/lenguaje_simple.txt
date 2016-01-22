@@ -3,8 +3,7 @@ EL LENGUAJE
 	1- 	Cada línea representa una instrucción. 
 	2- 	Las instrucciones se componen de: nombre de instrucción + argumentos separados por un espacio
 	3- 	Las instrucciones son:
-			ASIGN NOMBRE_DE_VARIABLE VALOR
-				-Asigna una valor a una variable
+		
 			ADD 	DESTINO VARIABLE_O_VALOR VARIABLE_O_VALOR
 				-Suma primero a segundo y lo asigna a DESTINO. Para restar, ADD con números negativos.
 			DIV		DESTINO VARIABLE_O_VALOR VARIABLE_O_VALOR
@@ -15,6 +14,10 @@ EL LENGUAJE
 				-Imprime por pantalla
 			REQ	DESTINO 
 				-Requiere datos del usuario y los guarda en DESTINO 
+		
+			-------------------------------------------------------------------		
+			ASIGN NOMBRE_DE_VARIABLE VALOR
+				-Asigna una valor a una variable			
 			LABEL NOMBRE_DE_ETIQUETA
 				-Declara un nombre de etiqueta. Las etiquetas sólo se ejecutan cuando se las invoca con una GOTO o GOTOIF
 			END_LABEL
@@ -27,9 +30,22 @@ EL LENGUAJE
 
 
 
-PROGRAMA TEST
+PROGRAMA SIMPLE
 ******************************
 	#Programa que pide dos numeros al usuario y los suma
+	PRINT Escribe el primer número:
+	REQ numeroUno
+	PRINT Escribe el segundo número:
+	REQ numeroDos
+	ADD suma numeroUno numeroDos
+	PRINT El resultado es
+	PRINT suma
+				
+				
+PROGRAMA CON FLUJO
+******************************
+	#Programa que pide dos numeros al usuario y los suma
+	#Se asegura de que el usuario realmente introduzca datos
 	LABEL pideNumeroUno
 	PRINT Escribe el primer número:
 	REQ numeroUno
@@ -47,7 +63,7 @@ PROGRAMA TEST
 	GOTOIF pideNumeroDos numeroDos = NULL
 
 	ADD suma numeroUno numeroDos
-	PRINT El resultado es 
+	PRINT El resultado es
 	PRINT suma
 
 	
