@@ -33,5 +33,16 @@ public class SOLID_TDD_S {
 			+"ADD suma numeroUno numeroDos\n"
 			+"PRINT El resultado es \n"
 			+"PRINT suma\n";
+			
+	String CODIGO_SIMPLE=
+	
+			"PRINT Escribe el primer número:\n"
+			+"REQ numeroUno\n"
+			+"PRINT Escribe el segundo número:\n"
+			+"REQ numeroDos\n"
+			+"ADD suma numeroUno numeroDos\n"
+			+"PRINT El resultado es \n"
+			+"PRINT suma\n";
+		
 
 }
