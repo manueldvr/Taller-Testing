@@ -17,9 +17,9 @@ EL LENGUAJE
 		
 			-------------------------------------------------------------------		
 			ASIGN NOMBRE_DE_VARIABLE VALOR
-				-Asigna una valor a una variable			
+				-Asigna un valor a una variable			
 			LABEL NOMBRE_DE_ETIQUETA
-				-Declara un nombre de etiqueta. Las etiquetas sólo se ejecutan cuando se las invoca con una GOTO o GOTOIF
+				-Declara un nombre de etiqueta. Las etiquetas sólo se ejecutan cuando se las invoca con un GOTOIF
 			END_LABEL
 				-Declara fin de la etiqueta actual
 			GOTOIF NOMBRE_DE_ETIQUETA VARIABLE_O_VALOR_O_NULL OPERATOR VARIABLE_O_VALOR_O_NULL
